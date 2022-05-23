@@ -131,11 +131,7 @@ Model hidrodinamika ini memerlukan banyak data untuk mensimulasikan suatu model.
 ![image](https://user-images.githubusercontent.com/105999278/169819789-df8015f0-a638-43c5-ae69-b8c61ef41414.png)
 
 ## Diskretisasi
-Diskretisasi yang digunakan dalam menganalisis solusi numerik pada pemodelan ini adalah metode CTCS (_Center Time Center Space_) dan FTCS (_Forward Time Centered Space_). Kedua metode ini merupakan salah satu metode beda hingga yang biasanya digunakan untuk menyelesaikan persamaan diferensial secara numerik. Berikut adalah bentuk penyelesainnya berdasarkan persamaan transport diatas.
 
-**CTCS**
-
-**FTCS**
 
 ## Penyelesaian Analitik
 ![image](https://user-images.githubusercontent.com/105999278/169820467-2ee3c3de-05f3-41b2-8c7d-54810c7a1a3f.png)
