@@ -21,8 +21,7 @@ Diskritisasi merupakan suatu metode untuk mencari solusi persamaan secara numeri
 
 Persamaan dari metode diskritisasi untuk suku adveksi 2D adalah sebagai berikut.
 
-![3 ad](https://user-images.githubusercontent.com/105967656/169830848-0cf35f66-21a0-46a0-9672-5d42187b6d0e.png)
-![4 ad](https://user-images.githubusercontent.com/105967656/169830895-df8105d1-90eb-4b3c-bafe-9f6262aeccea.png)
+![3 ad](https://user-images.githubusercontent.com/105967656/169830848-0cf35f66-21a0-46a0-9672-5d42187b6d0e.png)![4 ad](https://user-images.githubusercontent.com/105967656/169830895-df8105d1-90eb-4b3c-bafe-9f6262aeccea.png)
 
 
 
