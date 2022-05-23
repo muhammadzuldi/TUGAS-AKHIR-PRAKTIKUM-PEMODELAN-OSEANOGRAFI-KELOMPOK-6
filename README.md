@@ -49,7 +49,9 @@ Ny = int(y/dy)  #number of mesh in y direction
 Nt = int(Tend/dt) #number of timestep
 
 #perhitungan titik polutan di buang
+
 px1 = int(px/dx)
+
 py1 = int(py/dy)
 
 #fungsi disederhanakan
