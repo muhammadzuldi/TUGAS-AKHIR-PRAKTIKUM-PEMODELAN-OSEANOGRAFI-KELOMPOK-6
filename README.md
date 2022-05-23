@@ -5,6 +5,34 @@ Repositori ini dibuat sebagai pemenuhan tugas akhir kelompok praktikum pemodelan
 # MODUL 1
 
 # MODUL 2 : ADVEKSI DIFUSI 2D
+Proses penyebaran polutan terjadi melalui dua proses utama yaitu difusi dan adveksi, dan dapat dianggap dua mekanisme yang terpisah. Adveksi adalah proses perpindahan panas sebagai akibat dari adanya aliran. Difusi adaalah proses perpindahan panas berupa rambatan dari air dengan temperatur tinggi ke air dengan temperatur yang lebih rendah.
+
+Dasar dalam membangun model 2D untuk transpor adveksi adalah persamaan matematis sebagai berikut.
+
+![1 ad](https://user-images.githubusercontent.com/105967656/169827445-f5627e34-8a2e-4d83-821b-dbbb528bf7c7.png)
+
+Sedangkan dalam membangun model 2D untuk transpor dengan mekanisme difusi, dibangun dari persamaan matematis sebagai berikut.
+
+![2 ad](https://user-images.githubusercontent.com/105967656/169828458-50431384-0861-4ec0-be07-d24765c99f22.png)
+
+Persamaan adveksi dan difusi di atas merupakan persamaan umum yang menggambarkan proses adveksi serta difusi yang terjadi pada suatu materi sehingga untuk membentuk suatu persamaan model 2D yang mendekati proses kejadian di alam maka perlu adanya diskritisasi terhadap persamaan tersebut.
+
+Diskritisasi merupakan suatu metode untuk mencari solusi persamaan secara numerik dari suatu persamaan matematika sehingga dapat dinyatakan baik dalam dimensi ruang ataupun waktu. Proses diksritisasi model 2D pada suku adveksi umumnya menggunakan metode eksplisit upstream. Metode yang sama juga berlaku untuk deskritisasi suku difusi. Metode eksplisit upstream merupakan metode dimana persamaan beda hingga menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakan pendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju.
+
+Persamaan dari metode diskritisasi untuk suku adveksi 2D adalah sebagai berikut.
+
+![3 ad](https://user-images.githubusercontent.com/105967656/169830848-0cf35f66-21a0-46a0-9672-5d42187b6d0e.png)
+![4 ad](https://user-images.githubusercontent.com/105967656/169830895-df8105d1-90eb-4b3c-bafe-9f6262aeccea.png)
+
+Model 2D untuk mekanisme transpor difusi dapat menggunakan pendekatan beda maju untuk turunan waktu dan beda pusat untuk turunan ruang. Indeks n untuk waktu, indeks i untuk ruang, dan koefisiesn difusi AD dianggap konstan terhadap ruang dan waktu.
+
+Persamaan diskritisasi untuk model 2D difusi adalah sebagai berikut.
+
+![5 ad](https://user-images.githubusercontent.com/105967656/169831809-82eeb46b-68ce-4fd2-b28d-dcbd04b01fdb.png) ![6 ad](https://user-images.githubusercontent.com/105967656/169831852-cd31d095-6632-4244-b769-e32124d18886.png)
+
+
+
+
     import matplotlib.pyplot as plt
     import numpy as np
     import sys
@@ -108,61 +136,5 @@ Repositori ini dibuat sebagai pemenuhan tugas akhir kelompok praktikum pemodelan
     print('running timestep ke:' +str(n+1) + ' dari:' +str(Nt) + '('+ percentage(n+1,Nt)+')')
     print('Nilai CFL:' +str(cfl) + ' dengan arah: ' +str(theta))
 
-# MODUL 3 : MODEL HIDRODINAMIKA 1D
-Model Hidrodinamika merupakan suatu model yang dibangun dari adanya proses-proses yang mempengaruhi pergerakan massa air misalnya simulasi elevasi muka air laut dan arus yang dipengaruhi oleh beberapa parameter. Pemodelan ini melibatkan konversi massa atau kontinuitas dan hukum momentum dalam perhitungannya.
-
-Model hidrodinamika ini memerlukan banyak data untuk mensimulasikan suatu model. Selain itu proses simulasi yang lama karena _timestep_ yang digunakan cenderung kecil sehingga proses _running_ lebih lama dan juga rawan eror ketika perhitungan aliran kritis.
-
-## Persamaan yang Digunakan
-1. Persamaan Momentum
-
-![image](https://user-images.githubusercontent.com/105999278/169819353-d3588ab7-8f95-4d13-b578-d5c13d873160.png)
-
-2. Persamaan Kontinuitas
-
-![image](https://user-images.githubusercontent.com/105999278/169819422-dc7f6c54-55f5-4e28-9f70-192d5f99ee62.png)
-
-3. Persamaan Pembangun
-
-![image](https://user-images.githubusercontent.com/105999278/169819686-91d2f1fe-3f0c-43d9-9a16-c3452fc128c6.png)
-
-4. Persamaan Transport
-
-![image](https://user-images.githubusercontent.com/105999278/169826570-c17709e2-751a-4d79-baf7-00f58e18e944.png)
-
-Pada persamaan diatas ditinjau berdasarkan perubahan komponen Ut terhadap perubahan waktu dan Perubahan komponen ζ atau elevasi terhadap perubahan ruang.
-
-![image](https://user-images.githubusercontent.com/105999278/169826970-40df6be2-96c7-4373-a276-34e18757d729.png)
-
-Pada persamaan diatas ditinjau berdasarkan perubahan komponen ζ atau elevasi terhadap perubahan waktu dan perubahan komponen Ut terhadap perubahan ruang.
-
-**Dengan**
-**Ut = U x H**
-
-
-## Diskretisasi
-Diskritisasi merupakan suatu proses kuantitasi sifat-sifat kontinu. Kegunaan diskritisasi adalah untuk mereduksi dan menyederhanakan data sehingga didapatkan data diskrit yang lebih mudah dipahami, digunakan, dan dijelaskan. Salah satu metode yang dapat memperkirakan bentuk diferensial kontinu menjadi bentuk diskrit ialah dengan metode beda hingga. Bentuk diskrit dari kedua persamaan transport diatas yaitu sebagai berikut
-
-![image](https://user-images.githubusercontent.com/105999278/169830971-7d5a045b-1860-4614-ac1f-637a9686a866.png)
-
-**Syarat Kestabilan**
-
-![image](https://user-images.githubusercontent.com/105999278/169831253-c8009e56-8675-46c5-8cd6-5c1a80951ae4.png)
-
-
-## Penyelesaian Analitik
-![image](https://user-images.githubusercontent.com/105999278/169820467-2ee3c3de-05f3-41b2-8c7d-54810c7a1a3f.png)
-
-Keterangan:
-
-H	: Kedalaman terukur, konstan terhadap ruang (m)
-
-A	: Amplitudo
-
-U	: Kecepatan sesaat (m/s)
-
-ζ	: Elevasi (m)
-
-## Script Python
-
+# MODUL 3
 # MODUL 4
