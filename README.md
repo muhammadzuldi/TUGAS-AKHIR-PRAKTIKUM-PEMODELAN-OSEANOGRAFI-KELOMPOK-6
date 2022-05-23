@@ -41,7 +41,7 @@ Syarat batas merupakan suatu kondisi yang menggambarkan kondisi di batas baik ru
 
 Syarat batas dari metode eksplisit upstream diberikan pada nilai awal (hulu) dan nilai akhir (hilir).
 
-![image](https://user-images.githubusercontent.com/105967656/169834834-98803cd2-358c-4bd1-844b-e90ac39d5b3d.png)
+![9 ad](https://user-images.githubusercontent.com/105967656/169835878-0370d29d-1ba3-4fcb-883d-07b348a121bd.png)
 
 KRITERIA KESTABILAN
 
