@@ -10,7 +10,12 @@ Dasar dalam membangun model 2D untuk transpor adveksi adalah persamaan matematis
 
 ![1 ad](https://user-images.githubusercontent.com/105967656/169827445-f5627e34-8a2e-4d83-821b-dbbb528bf7c7.png)
 
+Sedangkan dalam membangun model 2D untuk transpor dengan mekanisme difusi, dibangun dari persamaan matematis sebagai berikut.
 
+![2 ad](https://user-images.githubusercontent.com/105967656/169828458-50431384-0861-4ec0-be07-d24765c99f22.png)
+
+Persamaan adveksi dan difusi di atas merupakan persamaan umum yang menggambarkan proses adveksi serta difusi yang terjadi pada suatu materi sehingga untuk membentuk suatu persamaan model 2D yang mendekati proses kejadian di alam maka perlu adanya diskritisasi terhadap persamaan tersebut.
+Diskritisasi merupakan suatu metode untuk mencari solusi persamaan secara numerik dari suatu persamaan matematika sehingga dapat dinyatakan baik dalam dimensi ruang ataupun waktu. Proses diksritisasi model 2D pada suku adveksi umumnya menggunakan metode eksplisit upstream. Metode yang sama juga berlaku untuk deskritisasi suku difusi. Metode eksplisit upstream merupakan metode dimana persamaan beda hingga menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u.
 
 
     import matplotlib.pyplot as plt
