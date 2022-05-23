@@ -108,5 +108,48 @@ Repositori ini dibuat sebagai pemenuhan tugas akhir kelompok praktikum pemodelan
     print('running timestep ke:' +str(n+1) + ' dari:' +str(Nt) + '('+ percentage(n+1,Nt)+')')
     print('Nilai CFL:' +str(cfl) + ' dengan arah: ' +str(theta))
 
-# MODUL 3
+# MODUL 3 : MODEL HIDRODINAMIKA 1D
+Model Hidrodinamika merupakan suatu model yang dibangun dari adanya proses-proses yang mempengaruhi pergerakan massa air misalnya simulasi elevasi muka air laut dan arus yang dipengaruhi oleh beberapa parameter. Pemodelan ini melibatkan konversi massa atau kontinuitas dan hukum momentum dalam perhitungannya.
+
+Model hidrodinamika ini memerlukan banyak data untuk mensimulasikan suatu model. Selain itu proses simulasi yang lama karena _timestep_ yang digunakan cenderung kecil sehingga proses _running_ lebih lama dan juga rawan eror ketika perhitungan aliran kritis.
+
+## Persamaan yang Digunakan
+1. Persamaan Momentum
+
+![image](https://user-images.githubusercontent.com/105999278/169819353-d3588ab7-8f95-4d13-b578-d5c13d873160.png)
+
+2. Persamaan Kontinuitas
+
+![image](https://user-images.githubusercontent.com/105999278/169819422-dc7f6c54-55f5-4e28-9f70-192d5f99ee62.png)
+
+3. Persamaan Pembangun
+
+![image](https://user-images.githubusercontent.com/105999278/169819686-91d2f1fe-3f0c-43d9-9a16-c3452fc128c6.png)
+
+4. Persamaan Transport
+
+![image](https://user-images.githubusercontent.com/105999278/169819789-df8015f0-a638-43c5-ae69-b8c61ef41414.png)
+
+## Diskretisasi
+Diskretisasi yang digunakan dalam menganalisis solusi numerik pada pemodelan ini adalah metode CTCS (_Center Time Center Space_) dan FTCS (_Forward Time Centered Space_). Kedua metode ini merupakan salah satu metode beda hingga yang biasanya digunakan untuk menyelesaikan persamaan diferensial secara numerik. Berikut adalah bentuk penyelesainnya berdasarkan persamaan transport diatas.
+
+**CTCS**
+
+**FTCS**
+
+## Penyelesaian Analitik
+![image](https://user-images.githubusercontent.com/105999278/169820467-2ee3c3de-05f3-41b2-8c7d-54810c7a1a3f.png)
+
+Keterangan:
+
+H	: Kedalaman terukur, konstan terhadap ruang (m)
+
+A	: Amplitudo
+
+U	: Kecepatan sesaat (m/s)
+
+ζ	: Elevasi (m)
+
+
+
 # MODUL 4
