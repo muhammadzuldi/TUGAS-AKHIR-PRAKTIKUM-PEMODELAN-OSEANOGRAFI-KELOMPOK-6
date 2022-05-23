@@ -23,7 +23,7 @@ theta = 90
 #theta = 225
 #theta = 405
 
-#paramter lanjutan
+#paramEter lanjutan
 q = 0.95 #kriteria kestabilan
 x = 500 #jumlah grid horizontal
 y = 500 #jumlah grid vertikal
@@ -49,9 +49,7 @@ Ny = int(y/dy)  #number of mesh in y direction
 Nt = int(Tend/dt) #number of timestep
 
 #perhitungan titik polutan di buang
-
 px1 = int(px/dx)
-
 py1 = int(py/dy)
 
 #fungsi disederhanakan
