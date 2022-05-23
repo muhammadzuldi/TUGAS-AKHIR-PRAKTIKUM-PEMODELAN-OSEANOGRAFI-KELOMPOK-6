@@ -54,6 +54,8 @@ Kriteria kestabilan yang digunakan untuk menyelesaikan pemodelan 2D adveksi difu
 
 
 
+
+
     import matplotlib.pyplot as plt
     import numpy as np
     import sys
