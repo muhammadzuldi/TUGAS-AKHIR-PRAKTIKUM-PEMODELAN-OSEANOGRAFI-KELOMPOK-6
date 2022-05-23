@@ -35,7 +35,12 @@ Persamaan diskritisasi adveksi dan difusi di atas jika digabungkan menjadi persa
 ![7 ad](https://user-images.githubusercontent.com/105967656/169833178-d69bb74c-367c-40a9-8c37-8e7220362b85.png)
 ![8 ad](https://user-images.githubusercontent.com/105967656/169833213-c0c79c64-f80b-4874-bc45-e761f7eb2766.png)
 
-Penentuan
+Penentuan Nilai Batas dan Syarat Batas
+
+Syarat batas merupakan suatu kondisi yang menggambarkan kondisi di batas baik ruang maupun waktu dari model yang dibangun.
+
+Syarat batas dari metode eksplisit upstream diberikan pada nilai awal (hulu) dan nilai akhir (hilir).
+
 
 
     import matplotlib.pyplot as plt
