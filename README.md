@@ -30,6 +30,11 @@ Persamaan diskritisasi untuk model 2D difusi adalah sebagai berikut.
 
 ![5 ad](https://user-images.githubusercontent.com/105967656/169831809-82eeb46b-68ce-4fd2-b28d-dcbd04b01fdb.png) ![6 ad](https://user-images.githubusercontent.com/105967656/169831852-cd31d095-6632-4244-b769-e32124d18886.png)
 
+Persamaan diskritisasi adveksi dan difusi di atas jika digabungkan menjadi persamaan berikut.
+
+![7 ad](https://user-images.githubusercontent.com/105967656/169833178-d69bb74c-367c-40a9-8c37-8e7220362b85.png)
+![8 ad](https://user-images.githubusercontent.com/105967656/169833213-c0c79c64-f80b-4874-bc45-e761f7eb2766.png)
+
 
 
 
