@@ -165,4 +165,66 @@ PENGAPLIKASIAN ADVEKSI-DIFUSI 2D DALAM BIDANG OSEANOGRAFI:
     print('Nilai CFL:' +str(cfl) + ' dengan arah: ' +str(theta))
 
 # MODUL 3
+
+Model Hidrodinamika merupakan suatu model yang dibangun dari adanya proses-proses yang mempengaruhi pergerakan massa air misalnya simulasi elevasi muka air laut dan arus yang dipengaruhi oleh beberapa parameter dengan melibatkan konversi massa atau kontinuitas dan hukum momentum dalam perhitungannya. Pemodelan ini memerlukan waktu yang cukup lama dikarenakan _timestep_ yang digunakan harus kecil sehingga proses _running_ model akan lama.
+
+## Pengaplikasian Model Hidrodinamika 
+
+## Persamaan yang Digunakan
+**1. Persamaan Momentum**
+
+![image](https://user-images.githubusercontent.com/105999278/169938943-3338e34e-1f22-48e5-95dc-d1ad5cc505c8.png)
+
+
+**2. Persamaan Kontinuitas**
+
+![image](https://user-images.githubusercontent.com/105999278/169938998-2a94f679-f3a8-4eae-8465-0acf116281e6.png)
+
+**3. Persamaan Pembangun**
+
+![image](https://user-images.githubusercontent.com/105999278/169939023-fc75eb60-aad0-4955-9f82-8c7d55d752f8.png)
+
+**5. Persamaan Transport**
+
+Dari persamaan pembangun diatas diubah menjadi persamaan transport sehingga persamaannnya adalah sebagai berikut.
+
+![image](https://user-images.githubusercontent.com/105999278/169939741-305533a3-a442-4058-b00a-23658bbeb552.png)
+
+Persamaan diatas ditinjau pada perubahan komponen Ut terhadap perubahan waktu       dan perubahan komponen ζ atau elevasi terhadap perubahan ruang.
+
+![image](https://user-images.githubusercontent.com/105999278/169939805-cb942204-42ad-4437-b106-846b7f283bc8.png)
+
+Persamaan diatas ditinjau pada perubahan komponen ζ atau elevasi terhadap           perubahan waktu dan perubahan komponen Ut terhadap perubahan ruang.
+
+Dengan nilai
+
+Ut = U x H
+    
+## Diskritisasi
+
+Diskritisasi merupakan suatu proses kuantitasi sifat-sifat kontinu. Kegunaan diskritisasi adalah untuk mereduksi dan menyederhanakan data sehingga didapatkan data diskrit yang lebih mudah dipahami, digunakan, dan dijelaskan. Salah satu metode yang dapat memperkirakan bentuk diferensial kontinu menjadi bentuk diskrit ialah dengan metode beda hingga. Berikut adalah bentuk diskrit berdasarkan persamaan transport diatas.
+
+![image](https://user-images.githubusercontent.com/105999278/169938326-1d32bd0e-7a58-4b0e-87d3-a64d4cfe1683.png)
+
+**Syarat Batas**
+
+![image](https://user-images.githubusercontent.com/105999278/169938406-8478f127-d424-4a41-8e97-7a519200e399.png)
+
+## Penyelesaian Analitik
+
+![image](https://user-images.githubusercontent.com/105999278/169939977-d7a9ff4f-a7dc-4724-81d5-2e6c01de2603.png)
+
+Keterangan:
+
+H   : Kedalaman terukur, konstan terhadap ruang (m)
+
+A   : Amplitudo
+
+U   : Kecepatan sesaat (m/s)
+
+ζ   : Elevasi (m)
+
+## Script Python untuk Pemodelan
+
+
 # MODUL 4
