@@ -52,7 +52,7 @@ Kriteria kestabilan yang digunakan untuk menyelesaikan pemodelan 2D adveksi difu
 
 ![10 ad](https://user-images.githubusercontent.com/105967656/169835595-b55cf6ca-5c38-4485-8c48-8f7cc28598da.png)
 
-## Pengaplikasian Aveksi-Difusi 2D dalam Bidang Oseanografi:
+## Pengaplikasian Adveksi-Difusi 2D dalam Bidang Oseanografi:
 
 1.
 
