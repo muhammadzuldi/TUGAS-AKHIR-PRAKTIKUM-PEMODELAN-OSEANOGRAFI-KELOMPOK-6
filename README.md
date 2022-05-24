@@ -17,6 +17,7 @@ Sedangkan dalam membangun model 2D untuk transpor dengan mekanisme difusi, diban
 
 Persamaan adveksi dan difusi di atas merupakan persamaan umum yang menggambarkan proses adveksi serta difusi yang terjadi pada suatu materi sehingga untuk membentuk suatu persamaan model 2D yang mendekati proses kejadian di alam maka perlu adanya diskritisasi terhadap persamaan tersebut.
 
+## Diskrtisasi
 Diskritisasi merupakan suatu metode untuk mencari solusi persamaan secara numerik dari suatu persamaan matematika sehingga dapat dinyatakan baik dalam dimensi ruang ataupun waktu. Proses diksritisasi model 2D pada suku adveksi umumnya menggunakan metode eksplisit upstream. Metode yang sama juga berlaku untuk deskritisasi suku difusi. Metode eksplisit upstream merupakan metode dimana persamaan beda hingga menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakan pendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju.
 
 Persamaan dari metode diskritisasi untuk suku adveksi 2D adalah sebagai berikut.
@@ -35,7 +36,7 @@ Persamaan diskritisasi adveksi dan difusi di atas jika digabungkan menjadi persa
 ![7 ad](https://user-images.githubusercontent.com/105967656/169833178-d69bb74c-367c-40a9-8c37-8e7220362b85.png)
 ![8 ad](https://user-images.githubusercontent.com/105967656/169833213-c0c79c64-f80b-4874-bc45-e761f7eb2766.png)
 
-PENENTUAN NILAI BATAS DAN SYARAT BATAS
+## Penentuan Nilai Batas dan Syarat Batas
 
 Syarat batas merupakan suatu kondisi yang menggambarkan kondisi di batas baik ruang maupun waktu dari model yang dibangun.
 
@@ -43,7 +44,7 @@ Syarat batas dari metode eksplisit upstream diberikan pada nilai awal (hulu) dan
 
 ![9 ad](https://user-images.githubusercontent.com/105967656/169835878-0370d29d-1ba3-4fcb-883d-07b348a121bd.png)
 
-KRITERIA KESTABILAN
+## Kriteria Kestabilan
 
 Suatu metode untuk menentukan seberapa besar nilai stabilitas dari model yang dibangun.
 
@@ -51,7 +52,7 @@ Kriteria kestabilan yang digunakan untuk menyelesaikan pemodelan 2D adveksi difu
 
 ![10 ad](https://user-images.githubusercontent.com/105967656/169835595-b55cf6ca-5c38-4485-8c48-8f7cc28598da.png)
 
-PENGAPLIKASIAN ADVEKSI-DIFUSI 2D DALAM BIDANG OSEANOGRAFI:
+## Pengaplikasian Aveksi-Difusi dalam Bidang Oseanografi:
 
 1.
 
@@ -59,7 +60,7 @@ PENGAPLIKASIAN ADVEKSI-DIFUSI 2D DALAM BIDANG OSEANOGRAFI:
 
 3.
 
-
+## Script Python untuk Pemodelan
 
     import matplotlib.pyplot as plt
     import numpy as np
